@@ -1,0 +1,88 @@
+package com.fixit.tasks.domain.service;
+
+import com.fixit.tasks.domain.enums.TaskStatus;
+import com.fixit.tasks.domain.exceptions.*;
+import com.fixit.tasks.domain.model.MasterWithUrgentCount;
+import com.fixit.tasks.domain.model.Task;
+import com.fixit.tasks.domain.model.Technician;
+import com.fixit.tasks.domain.util.constants.DomainConstants;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class TaskDomainService {
+
+    public void validateTaskCanBeDeleted(Task task) {
+        if (TaskStatus.IN_PROGRESS.equals(task.getStatus()) || TaskStatus.COMPLETED.equals(task.getStatus())) {
+            throw new TaskCannotBeDeletedException(
+                    String.format(DomainConstants.TASK_CANNOT_BE_DELETED_MESSAGE, task.getId(), task.getStatus()));
+        }
+    }
+
+    public Task validateTaskExist(Optional<Task> task, Long id) {
+        if (!task.isPresent()) {
+            throw new TaskNotFoundException(String.format(DomainConstants.TASK_NOT_FOUND_MESSAGE, id));
+        }
+        return task.get();
+    }
+
+    public void validateTaskUrgent(Task task) {
+        if (!task.isUrgent()) {
+            throw new TaskNotUrgentException(DomainConstants.TASK_NOT_URGENT_MESSAGE);
+        }
+
+        if (task.getStatus().equals(TaskStatus.ASSIGNED)) {
+            throw new TaskNotUrgentException(
+                    DomainConstants.TASK_NOT_ASSIGNED_MESSAGE);
+        }
+    }
+
+    public List<Task> getPendingUrgentTasks(List<Task> tasks) {
+        return tasks.stream()
+                .filter(Task::isUrgent)
+                .filter(task -> TaskStatus.PENDING.equals(task.getStatus()))
+                .toList();
+    }
+
+
+    public Technician selectBestMaster(List<MasterWithUrgentCount> mastersWithCount) {
+        if (mastersWithCount.isEmpty()) {
+            throw new NoMasterTechniciansAvailableException(DomainConstants.NO_MASTER_TECHNICIANS_AVAILABLE_MESSAGE);
+        }
+
+        long minCount = mastersWithCount.stream()
+                .mapToLong(MasterWithUrgentCount::urgentCount)
+                .min()
+                .orElse(0L);
+
+        List<Technician> candidates = mastersWithCount.stream()
+                .filter(m -> m.urgentCount() == minCount)
+                .map(MasterWithUrgentCount::master)
+                .toList();
+
+        return candidates.get(ThreadLocalRandom.current().nextInt(candidates.size()));
+    }
+
+    public void validatePriorityTask(Task existingTask, Task updatedTask) {
+        if (existingTask.getPriority().equals(updatedTask.getPriority())) {
+            throw new TaskAlreadyHasPriorityException(DomainConstants.TASK_ALREADY_HAS_PRIORITY , updatedTask.getId());
+        }
+
+
+    }
+    public void validateStatusAssigned(Task task) {
+        if (!task.getStatus().equals(TaskStatus.ASSIGNED)) {
+            throw new TaskMustBeAssignedToStartException(DomainConstants.TASK_MUST_BE_ASSIGNED_TO_START);
+        }
+    }
+
+    public void validateStatusProgress(Task task) {
+        if (!task.getStatus().equals(TaskStatus.IN_PROGRESS)) {
+            throw new TaskMustBeProgressToStartException(DomainConstants.TASK_MUST_BE_IN_PROGRESS);
+        }
+    }
+}
