@@ -1,0 +1,74 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.3' // Bajamos de 3.5.13 a 3.4.3
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.fixit'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+ext {
+	// Esta versión (2024.0.0) encaja perfecto con Spring Boot 3.4.x
+	set('springCloudVersion', "2024.0.0")
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Starters de Spring Boot
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// Documentación
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4'
+
+	// Mappers (MapStruct)
+	implementation 'org.mapstruct:mapstruct:1.6.3'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok:1.18.36'
+	annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+	// El binding es crucial para que Lombok y MapStruct no peleen
+	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+
+	// Base de datos y Herramientas
+	runtimeOnly 'org.postgresql:postgresql'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Seguridad (JWT)
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	// Feign Client para comunicación entre micros
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	// Tests
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+	testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
