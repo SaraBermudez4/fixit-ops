@@ -12,10 +12,14 @@ public final class DomainConstants {
     public static final String TASK_CANNOT_BE_DELETED_MESSAGE = "Task with id %d cannot be deleted because its status is %s.";
     public static final String TASK_NOT_URGENT_MESSAGE = "Task must have URGENT priority to be assigned to Master technicians.";
     public static final String TASK_NOT_ASSIGNED_MESSAGE = "Only tasks with ASSIGNED status can be reassigned to Master technicians.";
+    public static final String NO_PENDING_URGENT_TASKS_MESSAGE = "No pending urgent tasks to assign";
+    public static final String ALL_URGENT_TASKS_ASSIGNED_MESSAGE = "All urgent tasks assigned successfully";
+    public static final String AUTO_ASSIGN_URGENT_TASKS_MESSAGE = "Assigned %d tasks. %d pending urgent tasks remain";
     public static final String NO_MASTER_TECHNICIANS_AVAILABLE_MESSAGE = "No Master technicians available to assign urgent tasks.";
     public static final String FEIGN_INVALID_REQUEST = "Invalid request data sent to User Service.";
     public static final String FEIGN_NOT_FOUND = "User or Role not found in User Service.";
-    public static final String FEIGN_ROLE_CONFLICT = "User already holds a role in this tournament.";
+    public static final String FEIGN_ROLE_CONFLICT = "Role assignment conflict in User Service.";
     public static final String FEIGN_GENERIC_ERROR = "Generic error in User Microservice communication.";
+
 
 }

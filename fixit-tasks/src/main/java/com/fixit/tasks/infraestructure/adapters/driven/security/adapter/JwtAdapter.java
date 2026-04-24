@@ -24,26 +24,6 @@ public class JwtAdapter implements IJwtPersistencePort {
     private Long expiration;
 
     @Override
-    public String generateAccessToken(String email, Long userId, String role) {
-        Map<String, Object> claims = new HashMap<>();
-        claims.put("id", userId);
-        claims.put("role", role);
-
-        return Jwts.builder()
-                .setClaims(claims)
-                .setSubject(email)
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + expiration))
-                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
-                .compact();
-    }
-    @Override
-    public Long getUserIdFromToken(String token) {
-        Claims claims = extractAllClaims(token);
-        return claims.get("id", Long.class);
-    }
-
-    @Override
     public String getRoleFromToken(String token) {
         Claims claims = extractAllClaims(token);
         return claims.get("role", String.class);
@@ -54,16 +34,6 @@ public class JwtAdapter implements IJwtPersistencePort {
         return extractClaim(token, Claims::getSubject);
     }
 
-    @Override
-    public boolean isTokenValid(String token, String username) {
-        final String tokenUsername = getUsernameFromToken(token);
-        return (tokenUsername.equals(username) && !isTokenExpired(token));
-    }
-
-    @Override
-    public Long getAccessExpirationTime() {
-        return expiration;
-    }
 
     private <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
@@ -76,10 +46,6 @@ public class JwtAdapter implements IJwtPersistencePort {
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
-    }
-
-    private boolean isTokenExpired(String token) {
-        return extractClaim(token, Claims::getExpiration).before(new Date());
     }
 
     private Key getSigningKey() {

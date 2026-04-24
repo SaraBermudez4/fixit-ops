@@ -20,8 +20,8 @@ public class ControllerAdvisor {
     public ResponseEntity<ExceptionResponse> handlerExternalServiceException(
             ExternalServiceException exception) {
         return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(new ExceptionResponse(
-                exception.getMessage(), HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase(), LocalDateTime.now
-                     (), HttpStatus.SERVICE_UNAVAILABLE.value()));
+                exception.getMessage(), HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase(), LocalDateTime.now(),
+                HttpStatus.SERVICE_UNAVAILABLE.value()));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -61,7 +61,6 @@ public class ControllerAdvisor {
                 exception.getMessage(), HttpStatus.BAD_REQUEST.getReasonPhrase(), LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value()));
     }
-
 
     @ExceptionHandler(TaskAlreadyHasPriorityException.class)
     public ResponseEntity<ExceptionResponse> handleTaskAlreadyHasPriority(TaskAlreadyHasPriorityException exception) {

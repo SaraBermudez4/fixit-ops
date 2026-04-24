@@ -6,6 +6,7 @@ import com.fixit.tasks.domain.model.Technician;
 import java.util.List;
 
 public interface ITechnicianFeignClientPort {
+    Technician findById(Long id);
     List<Technician> findByCategory(TechnicianCategory category);
     List<Technician> findAll();
     Technician updateTechnician(Technician technician);

@@ -1,4 +1,15 @@
 services:
+
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq-broker
+    ports: 
+      - "5672:5672" # Puerto del Broker (Mensajería)
+      - "15672:15672" # Puerto del Dashboard (UI)
+    environment: 
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
   postgres:
     image: postgres:16-alpine
     container_name: fixit-postgres

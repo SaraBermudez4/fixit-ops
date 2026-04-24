@@ -27,4 +27,7 @@ public interface ITechnicianFeignClient {
             @PathVariable("id") Long id,
             @RequestBody TechnicianFeignRequest technicianRequest
     );
+
+    @GetMapping("/{id}")
+    TechnicianFeignResponse getTechnicianById(@PathVariable Long id);
 }

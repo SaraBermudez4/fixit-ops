@@ -16,6 +16,11 @@ public class TechnicianFeignAdapter implements ITechnicianFeignClientPort {
     private final ITechnicianFeignMapper feignMapper;
 
     @Override
+    public Technician findById(Long id) {
+        return feignMapper.toDomain(technicianFeignClient.getTechnicianById(id));
+    }
+
+    @Override
     public List<Technician> findByCategory(TechnicianCategory category) {
         return technicianFeignClient.getTechniciansByCategory(category).stream()
                 .map(feignMapper::toDomain)

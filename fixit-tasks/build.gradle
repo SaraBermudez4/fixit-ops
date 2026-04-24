@@ -58,8 +58,7 @@ dependencies {
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-	implementation 'org.springframework.boot:spring-boot-starter-amqp'
-	testImplementation 'org.springframework.amqp:spring-rabbit-test'
+
 }
 
 dependencyManagement {

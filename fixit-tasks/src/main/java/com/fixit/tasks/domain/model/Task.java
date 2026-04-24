@@ -55,12 +55,4 @@ public class Task {
                 .build();
     }
 
-    public int getPoints() {
-        return switch (priority) {
-            case HIGH -> 8;
-            case MEDIUM -> 5;
-            case LOW -> 3;
-            case URGENT -> 10;
-        };
-    }
 }

@@ -4,4 +4,5 @@ public enum TechnicianStatus {
     AVAILABLE,
     BUSY,
     NOT_AVAILABLE;
+
 }

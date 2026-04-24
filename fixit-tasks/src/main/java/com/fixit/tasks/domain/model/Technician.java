@@ -15,8 +15,5 @@ public class Technician {
     Integer currentPoints;
 
 
-    public Integer getAvailablePoints() {
-        int maxPoints = category.getMaxPoints();
-        return (maxPoints == 0) ? 0 : maxPoints - this.currentPoints;
-    }
+
 }
