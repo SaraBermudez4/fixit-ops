@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-notifications" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/fixit-notifications" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-tasks" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/fixit-tasks" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-user" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/fixit-user" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

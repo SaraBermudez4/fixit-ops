@@ -16,5 +16,4 @@ public interface ITaskEntityMapper {
 
     Task toDomain(TaskEntity taskEntity);
 
-    List<Task> toDomainList(List<TaskEntity> taskEntities);
 }

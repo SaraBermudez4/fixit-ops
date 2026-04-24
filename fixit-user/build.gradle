@@ -14,7 +14,6 @@ java {
 }
 
 ext {
-	// Esta versión (2024.0.0) encaja perfecto con Spring Boot 3.4.x
 	set('springCloudVersion', "2024.0.0")
 }
 

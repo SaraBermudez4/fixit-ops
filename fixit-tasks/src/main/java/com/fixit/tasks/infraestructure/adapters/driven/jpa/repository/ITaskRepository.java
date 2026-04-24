@@ -12,6 +12,4 @@ import java.util.List;
 public interface ITaskRepository extends JpaRepository<TaskEntity, Long> {
 
     long countByTechnicianIdAndPriority(Long technicianId, TaskPriority priority);
-    List<TaskEntity> findByStatus(TaskStatus status);
-    List<TaskEntity> findByTechnicianId(Long technicianId);
 }

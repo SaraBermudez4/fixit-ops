@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/fixit-op.iml" filepath="$PROJECT_DIR$/.idea/fixit-op.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tasks.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tasks.main.iml" />
     </modules>
   </component>
 </project>

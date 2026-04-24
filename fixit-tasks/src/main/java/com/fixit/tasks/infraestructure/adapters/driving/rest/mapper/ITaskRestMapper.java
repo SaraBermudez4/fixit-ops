@@ -23,13 +23,4 @@ public interface ITaskRestMapper {
 
     TaskResponse toResponse(Task task);
 
-    List<TaskResponse> toResponseList(List<Task> tasks);
-
-    default TaskPriority mapPriority(String priority) {
-        return TaskPriority.valueOf(priority.toUpperCase());
-    }
-
-    @Mapping(target = "pendingCount", source = "remainingPendingCount")
-    @Mapping(target = "status", expression = "java(summary.success() ? \"SUCCESS\" : \"PARTIAL\")")
-    AutoAssignResponse toAutoAssignResponse(AutoAssignSummary summary);
 }

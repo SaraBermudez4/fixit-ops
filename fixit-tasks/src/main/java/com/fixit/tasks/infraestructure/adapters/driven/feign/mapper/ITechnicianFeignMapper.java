@@ -19,9 +19,6 @@ public interface ITechnicianFeignMapper {
     @Mapping(target = "status", source = "status")
     Technician toDomain(TechnicianFeignResponse response);
 
-    TechnicianFeignResponse toDto(Technician technician);
-
-
     @Mapping(target = "category", expression = "java(technician.getCategory())")
     @Mapping(target = "status", expression = "java(technician.getStatus())")
     @Mapping(target = "taskCount", source = "taskCount")

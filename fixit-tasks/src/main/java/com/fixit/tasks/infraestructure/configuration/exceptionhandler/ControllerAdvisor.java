@@ -16,12 +16,12 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class ControllerAdvisor {
 
-    @ExceptionHandler(TechnicianAlreadyExistsException.class)
-    public ResponseEntity<ExceptionResponse> handlerTechnicianAlreadyExistsException(
-            TechnicianAlreadyExistsException exception) {
-        return ResponseEntity.status(HttpStatus.CONFLICT).body(new ExceptionResponse(
-                exception.getMessage(), HttpStatus.CONFLICT.getReasonPhrase(), LocalDateTime.now(),
-                HttpStatus.CONFLICT.value()));
+    @ExceptionHandler(ExternalServiceException.class)
+    public ResponseEntity<ExceptionResponse> handlerExternalServiceException(
+            ExternalServiceException exception) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(new ExceptionResponse(
+                exception.getMessage(), HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase(), LocalDateTime.now
+                     (), HttpStatus.SERVICE_UNAVAILABLE.value()));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -62,25 +62,6 @@ public class ControllerAdvisor {
                 HttpStatus.BAD_REQUEST.value()));
     }
 
-    @ExceptionHandler(TechnicianBusyException.class)
-    public ResponseEntity<ExceptionResponse> handleTechnicianBusyException(TechnicianBusyException exception) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ExceptionResponse(
-                exception.getMessage(), HttpStatus.BAD_REQUEST.getReasonPhrase(), LocalDateTime.now(),
-                HttpStatus.BAD_REQUEST.value()));
-    }
-    @ExceptionHandler(TechnicianSameCategoryException.class)
-    public ResponseEntity<ExceptionResponse> handleTechnicianSameCategoryException(TechnicianSameCategoryException exception) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ExceptionResponse(
-                exception.getMessage(), HttpStatus.BAD_REQUEST.getReasonPhrase(), LocalDateTime.now(),
-                HttpStatus.BAD_REQUEST.value()));
-    }
-
-    @ExceptionHandler(TechnicianNotFoundException.class)
-    public ResponseEntity<ExceptionResponse> handleTechnicianNotFoundException(TechnicianNotFoundException exception) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ExceptionResponse(
-                exception.getMessage(), HttpStatus.NOT_FOUND.getReasonPhrase(), LocalDateTime.now(),
-                HttpStatus.NOT_FOUND.value()));
-    }
 
     @ExceptionHandler(TaskAlreadyHasPriorityException.class)
     public ResponseEntity<ExceptionResponse> handleTaskAlreadyHasPriority(TaskAlreadyHasPriorityException exception) {
