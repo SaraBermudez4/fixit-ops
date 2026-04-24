@@ -10,9 +10,6 @@ import com.fixit.tasks.domain.util.constants.DomainConstants;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class TaskDomainService {
 

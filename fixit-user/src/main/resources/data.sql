@@ -9,4 +9,4 @@ SELECT
     'ADMIN'
     WHERE NOT EXISTS (
     SELECT 1 FROM users.users WHERE email = 'admin@fixit.com'
-);docker exec -it fixit-postgres psql -U fixit_user -d fixit_db
+);

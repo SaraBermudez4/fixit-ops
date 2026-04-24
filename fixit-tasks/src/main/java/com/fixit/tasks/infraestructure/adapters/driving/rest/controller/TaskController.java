@@ -2,16 +2,9 @@ package com.fixit.tasks.infraestructure.adapters.driving.rest.controller;
 
 import com.fixit.tasks.application.port.in.ITaskServicePort;
 import com.fixit.tasks.infraestructure.adapters.driving.rest.dto.request.TaskRequest;
-import com.fixit.tasks.infraestructure.adapters.driving.rest.dto.response.AutoAssignResponse;
-import com.fixit.tasks.infraestructure.adapters.driving.rest.dto.response.DeleteResponse;
 import com.fixit.tasks.infraestructure.adapters.driving.rest.dto.response.TaskResponse;
 import com.fixit.tasks.infraestructure.adapters.driving.rest.mapper.ITaskRestMapper;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +33,11 @@ public class TaskController {
                                 taskServicePort.createTask(taskRestMapper.toDomain(request))));
         }
 
-
+        @GetMapping("/technician/{technicianId}")
+        @PreAuthorize("hasRole('ADMIN') or hasRole('TECHNICIAN')")
+        @Operation(summary = "Get tasks by technician", description = "Returns all tasks assigned to a specific technician.")
+        public ResponseEntity<List<TaskResponse>> getTasksByTechnician(@PathVariable Long technicianId) {
+                return ResponseEntity.ok(taskRestMapper.toResponseList(taskServicePort.findByTechnicianId(technicianId)));
+        }
 
 }

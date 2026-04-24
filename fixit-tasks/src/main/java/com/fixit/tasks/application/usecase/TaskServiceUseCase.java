@@ -65,6 +65,11 @@ public class TaskServiceUseCase implements ITaskServicePort {
         Technician selected = taskDomainService.selectBestMaster(mastersWithCount);
         return executeAssignment(task, selected, 0);
     }
+    @Override
+    public List<Task> findByTechnicianId(Long technicianId) {
+        return taskPersistencePort.findByTechnicianId(technicianId);
+    }
+
     private Task executeAssignment(Task task, Technician technician, int points) {
         Technician updatedTech = assignmentStrategy.updateTechnicianState(technician, points);
         technicianFeignClientPort.updateTechnician(updatedTech);

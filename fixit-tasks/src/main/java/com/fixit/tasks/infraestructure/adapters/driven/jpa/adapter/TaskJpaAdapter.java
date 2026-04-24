@@ -28,4 +28,9 @@ public class TaskJpaAdapter implements ITaskPersistencePort {
     public long countUrgentTasksByTechnicianId(Long technicianId) {
         return taskRepository.countByTechnicianIdAndPriority(technicianId, TaskPriority.URGENT);
     }
+
+    @Override
+    public List<Task> findByTechnicianId(Long technicianId) {
+        return taskEntityMapper.toDomainList(taskRepository.findByTechnicianId(technicianId));
+    }
 }

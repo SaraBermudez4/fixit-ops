@@ -3,7 +3,7 @@ package com.fixit.notification.infraestructure.configuration.bean;
 import com.fixit.notification.application.port.in.ISmsNotificationServicePort;
 import com.fixit.notification.application.port.out.ITwilioSmsNotificationPort;
 import com.fixit.notification.application.usecase.SmsNotificationUseCase;
-import com.fixit.notification.infraestructure.adapters.driven.twilio.TwilioSmsAdapter;
+import com.fixit.notification.infraestructure.adapters.driven.jpa.adapter.TwilioJpaAdapter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ public class BeanConfiguration {
             @Value("${twilio.auth-token}") String authToken,
             @Value("${twilio.phone-number}") String fromPhoneNumber
     ) {
-        return new TwilioSmsAdapter(accountSid, authToken, fromPhoneNumber);
+        return new TwilioJpaAdapter(accountSid, authToken, fromPhoneNumber);
     }
 
     @Bean
