@@ -1,5 +1,4 @@
 services:
-
   postgres:
     image: postgres:16-alpine
     container_name: fixit-postgres
@@ -35,6 +34,27 @@ services:
       FIXIT_TASKS_URL: ${FIXIT_TASKS_URL}
     ports:
       - "${SERVER_PORT_USER}:${SERVER_PORT_USER}"
+    networks:
+      - fixit-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  fixit-tasks:
+    build: ./fixit-tasks
+    environment:
+      SERVER_PORT: ${SERVER_PORT_TASKS}
+      USER_SERVICE_URL: ${FIXIT_USER_URL}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_SCHEMA: ${DB_SCHEMA_TASK}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION: ${JWT_EXPIRATION}
+    ports:
+      - "${SERVER_PORT_TASKS}:${SERVER_PORT_TASKS}"
     networks:
       - fixit-network
     depends_on:
