@@ -1,16 +1,14 @@
 package com.fixit.tasks.application.usecase;
 
 import com.fixit.tasks.application.port.in.ITaskServicePort;
+import com.fixit.tasks.application.port.out.INotificationEventPort;
 import com.fixit.tasks.application.port.out.ITaskPersistencePort;
 import com.fixit.tasks.application.port.out.ITechnicianFeignClientPort;
 import com.fixit.tasks.domain.enums.TaskPriority;
 import com.fixit.tasks.domain.enums.TaskStatus;
 import com.fixit.tasks.domain.enums.TechnicianCategory;
 import com.fixit.tasks.domain.enums.TechnicianStatus;
-import com.fixit.tasks.domain.model.AutoAssignSummary;
-import com.fixit.tasks.domain.model.MasterWithUrgentCount;
-import com.fixit.tasks.domain.model.Task;
-import com.fixit.tasks.domain.model.Technician;
+import com.fixit.tasks.domain.model.*;
 import com.fixit.tasks.domain.service.AssignmentStrategy;
 import com.fixit.tasks.domain.service.TaskDomainService;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +24,7 @@ public class TaskServiceUseCase implements ITaskServicePort {
     private final TaskDomainService taskDomainService;
     private final AssignmentStrategy assignmentStrategy;
     private final ITechnicianFeignClientPort technicianFeignClientPort;
+    private final INotificationEventPort notificationEventPort;
 
     @Override
     public List<Task> getAll() {
@@ -100,21 +99,24 @@ public class TaskServiceUseCase implements ITaskServicePort {
 
     @Override
     public void completeTask(Long taskId) {
-        log.info("Completing task ID: {}", taskId);
         Task task = getById(taskId);
         taskDomainService.validateStatusProgress(task);
 
         Technician technician = technicianFeignClientPort.findById(task.getTechnicianId());
-        Technician updatedTechnician = assignmentStrategy.releaseTechnicianLoad(
-                technician,
-                task.getPriority().getPoints()
+        Technician releasedTech = assignmentStrategy.releaseTechnicianLoad(
+                technician, task.getPriority().getPoints()
         );
 
         Task completedTask = task.complete();
 
-        technicianFeignClientPort.updateTechnician(updatedTechnician);
+        technicianFeignClientPort.updateTechnician(releasedTech);
         taskPersistencePort.save(completedTask);
-        log.info("Task ID: {} completed and technician ID: {} load released", taskId, technician.getUser().getId());
+
+        notificationEventPort.sendTaskCompletedNotification(
+                TaskNotificationEvent.forCompletion(completedTask, releasedTech)
+        );
+
+        log.info("Task ID: {} completed, technician ID: {} load released", taskId, releasedTech.getUser().getId());
     }
 
     @Override
@@ -281,8 +283,19 @@ public class TaskServiceUseCase implements ITaskServicePort {
                 .technicianId(technician.getUser().getId())
                 .status(TaskStatus.ASSIGNED)
                 .build();
+        Task saved = taskPersistencePort.save(assignedTask);
 
-        log.info("Task ID: {} successfully assigned to technician ID: {}", task.getId(), technician.getUser().getId());
-        return taskPersistencePort.save(assignedTask);
+        String technicianPhone = technicianFeignClientPort.getPhoneNumber(technician.getUser().getId());
+
+        log.info("[DEBUG-PHONE] Phone retrieved from dedicated endpoint: {}", technicianPhone);
+
+        TaskNotificationEvent event = TaskNotificationEvent.forAssignment(saved, updatedTech)
+                .toBuilder()
+                .phoneNumber(technicianPhone)
+                .build();
+        notificationEventPort.sendTaskAssignedNotification(event);
+
+        log.info("Task ID: {} assigned to technician ID: {}", saved.getId(), technician.getUser().getId());
+        return saved;
     }
 }

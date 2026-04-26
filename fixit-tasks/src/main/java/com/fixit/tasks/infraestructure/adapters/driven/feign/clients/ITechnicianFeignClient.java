@@ -30,4 +30,7 @@ public interface ITechnicianFeignClient {
 
     @GetMapping("/{id}")
     TechnicianFeignResponse getTechnicianById(@PathVariable Long id);
+
+    @GetMapping("/{id}/phone")
+    String getPhoneNumber(@PathVariable("id") Long id);
 }

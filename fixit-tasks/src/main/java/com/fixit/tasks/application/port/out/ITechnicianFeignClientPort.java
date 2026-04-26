@@ -10,4 +10,5 @@ public interface ITechnicianFeignClientPort {
     List<Technician> findByCategory(TechnicianCategory category);
     List<Technician> findAll();
     Technician updateTechnician(Technician technician);
+    String getPhoneNumber(Long id);
 }

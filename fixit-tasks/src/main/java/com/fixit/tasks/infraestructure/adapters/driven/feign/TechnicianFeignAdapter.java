@@ -43,4 +43,11 @@ public class TechnicianFeignAdapter implements ITechnicianFeignClientPort {
                 )
         );
     }
+
+    @Override
+    public String getPhoneNumber(Long id) {
+        return technicianFeignClient.getPhoneNumber(id);
+    }
+
+
 }
