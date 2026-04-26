@@ -16,4 +16,5 @@ public interface ITechnicianServicePort {
     TechnicianWorkload getTechnicianWorkload(Long id);
     Technician updateTechnicianCategory (Long id, TechnicianCategory newCategory);
     void delete(Long id);
+    String getTechnicianPhoneNumber(Long id);
 }

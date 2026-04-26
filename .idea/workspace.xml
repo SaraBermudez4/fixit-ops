@@ -5,37 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6326f6e4-a734-4ed1-927c-f7acef4189b8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/awsToolkit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/rabbit/adapter/RabbitMQEventAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/rabbit/config/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/enums/TechnicianStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/enums/TechnicianStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/exceptions/TechnicianAlreadyExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/exceptions/TechnicianBusyException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/exceptions/TechnicianCannotBeDeletedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/exceptions/TechnicianNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/exceptions/TechnicianSameCategoryException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/exceptions/UserRoleConflictException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/model/AutoAssignSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/model/AutoAssignSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/model/TechnicianWorkload.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/service/AssignmentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/service/AssignmentStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/service/TechnicianDomainService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/util/constants/DomainConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/domain/util/constants/DomainConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/feign/configuration/CustomFeignErrorDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/feign/configuration/CustomFeignErrorDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/feign/mapper/ITechnicianFeignMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/feign/mapper/ITechnicianFeignMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/jpa/mapper/ITaskEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/jpa/mapper/ITaskEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/jpa/repository/ITaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driven/jpa/repository/ITaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driving/rest/dto/response/TaskSummaryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driving/rest/dto/response/TechnicianResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driving/rest/dto/response/TechnicianWorkloadResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driving/rest/mapper/ITaskRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/adapters/driving/rest/mapper/ITaskRestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/configuration/exceptionhandler/ControllerAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-tasks/src/main/java/com/fixit/tasks/infraestructure/configuration/exceptionhandler/ControllerAdvisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/application/usecase/SmsNotificationUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/application/usecase/SmsNotificationUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/domain/enums/TaskPriority.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/domain/enums/TaskPriority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/event/TaskNotificationEventDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/event/TaskNotificationEventDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/handler/TaskNotificationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/handler/TaskNotificationEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/listener/TaskNotificationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/listener/TaskNotificationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/mapper/INotificationEventMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/mapper/INotificationEventMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/util/EventConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/util/EventConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/configuration/bean/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/configuration/bean/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/port/in/ITechnicianServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/port/in/ITechnicianServicePort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/usecase/TechnicianUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/usecase/TechnicianUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/infraestructure/adapters/driving/rest/controller/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/infraestructure/adapters/driving/rest/controller/TechnicianController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +52,29 @@
         <task path="$PROJECT_DIR$/fixit-user">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/fixit-notifications">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="notification" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="notification" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="notification" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="tasks" type="f1a62948:ProjectNode" />
               </path>
               <path>
@@ -81,22 +86,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="tasks" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="user" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="user" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="user" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -121,12 +111,12 @@
     &quot;assignee&quot;: &quot;SaraBermudez4&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/SaraBermudez4/fixit-ops.git&quot;,
-    &quot;accountId&quot;: &quot;4486e78f-2c72-49cb-aee4-e940c4069fb0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:SaraBermudez4/fixit-ops.git",
+    "accountId": "4486e78f-2c72-49cb-aee4-e940c4069fb0"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -141,8 +131,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.fixit-notifications [build].executor": "Run",
+    "Gradle.fixit-notifications [clean].executor": "Run",
     "Gradle.fixit-tasks [bootRun].executor": "Run",
+    "Gradle.fixit-tasks [build].executor": "Run",
+    "Gradle.fixit-tasks [clean].executor": "Run",
     "Gradle.fixit-user [bootRun].executor": "Run",
+    "Gradle.fixit-user [build].executor": "Run",
+    "Gradle.fixit-user [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -161,31 +157,24 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.fixit-tasks [bootRun]">
-    <configuration name="fixit-tasks [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fixit.notification.domain.enums" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.fixit-tasks [build]">
+    <configuration name="fixit-notifications [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
-        <option name="env">
-          <map>
-            <entry key="DB_HOST" value="localhost" />
-            <entry key="DB_NAME" value="fixit_db" />
-            <entry key="DB_PASSWORD" value="postgres" />
-            <entry key="DB_PORT" value="5432" />
-            <entry key="DB_SCHEMA" value="tasks" />
-            <entry key="DB_USERNAME" value="postgres" />
-            <entry key="JWT_EXPIRATION" value="86400000" />
-            <entry key="JWT_SECRET" value="586B633A7A4B3F4428472B4B6250655368566D597133743677397A2443264629" />
-          </map>
-        </option>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-tasks" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-notifications" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootRun" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,7 +188,57 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="fixit-user [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="fixit-tasks [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-tasks" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="fixit-tasks [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-tasks" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="fixit-user [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-user" />
@@ -210,7 +249,32 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootRun" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="fixit-user [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/fixit-user" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -225,13 +289,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.fixit-user [bootRun]" />
-      <item itemvalue="Gradle.fixit-tasks [bootRun]" />
+      <item itemvalue="Gradle.fixit-notifications [build]" />
+      <item itemvalue="Gradle.fixit-tasks [build]" />
+      <item itemvalue="Gradle.fixit-tasks [clean]" />
+      <item itemvalue="Gradle.fixit-user [build]" />
+      <item itemvalue="Gradle.fixit-user [clean]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.fixit-tasks [bootRun]" />
-        <item itemvalue="Gradle.fixit-user [bootRun]" />
+        <item itemvalue="Gradle.fixit-tasks [build]" />
+        <item itemvalue="Gradle.fixit-tasks [clean]" />
+        <item itemvalue="Gradle.fixit-user [build]" />
+        <item itemvalue="Gradle.fixit-user [clean]" />
+        <item itemvalue="Gradle.fixit-notifications [build]" />
       </list>
     </recent_temporary>
   </component>

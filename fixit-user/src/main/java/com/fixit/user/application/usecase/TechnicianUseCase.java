@@ -127,6 +127,20 @@ public class TechnicianUseCase implements ITechnicianServicePort {
     }
 
     @Override
+    public String getTechnicianPhoneNumber(Long id) {
+        log.info("[QUERY] Fetching phone number for technician ID: {}", id);
+
+        Technician technician = userPersistencePort.findById(id);
+
+        technicianDomainService.validateTechnicianExists(technician, id);
+
+        String phoneNumber = technician.getUser().getPhoneNumber();
+
+        log.debug("[QUERY-SUCCESS] Phone number found for technician ID {}: {}", id, phoneNumber);
+        return phoneNumber;
+    }
+
+    @Override
     public Technician getTechnicianById(Long id) {
         log.debug("[QUERY] Fetching technician details for ID: {}", id);
         return technicianDomainService.validateTechnicianExists(userPersistencePort.findById(id), id);

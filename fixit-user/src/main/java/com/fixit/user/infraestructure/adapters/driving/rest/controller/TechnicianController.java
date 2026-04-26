@@ -257,4 +257,11 @@ public class TechnicianController {
 
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{id}/phone")
+    public ResponseEntity<String> getTechnicianPhone(@PathVariable Long id) {
+        log.info("[QUERY] Fetching only phone for technician ID: {}", id);
+        String phone = userServicePort.getTechnicianPhoneNumber(id);
+        return ResponseEntity.ok(phone);
+    }
 }

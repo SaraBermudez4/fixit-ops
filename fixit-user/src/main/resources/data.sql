@@ -4,7 +4,7 @@ SELECT
     'Admin',
     'Fixit',
     'admin@fixit.com',
-    '$2a$10$KIm8nHRrNszphpDLo80V6e7z9ufobmsreqR0aVWBtBMvvYC7e9Qza',
+    '$2b$10$lg7DsUUlaW6EbAWVpqYGlet2NV0KvMdZo93wwaWUQ57VF6u9691VG',
     '+573001234567',
     'ADMIN'
     WHERE NOT EXISTS (

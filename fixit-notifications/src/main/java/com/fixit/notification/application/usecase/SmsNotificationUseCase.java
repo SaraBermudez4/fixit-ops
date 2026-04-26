@@ -20,17 +20,10 @@ public class SmsNotificationUseCase implements ISmsNotificationServicePort {
     public SmsNotificationResponse sendSms(SmsNotification smsNotification) {
         log.info("[USECASE][SMS] Request to send SMS to {}", smsNotification.toPhoneNumber());
 
-        validatePhoneNumber(smsNotification.toPhoneNumber());
-
         SmsNotificationResponse response = twilioSmsNotificationPort.sendSms(smsNotification);
 
         log.info("[USECASE][SMS-SUCCESS] SMS sent successfully to {}", smsNotification.toPhoneNumber());
         return response;
     }
 
-    private void validatePhoneNumber(String phoneNumber) {
-        if (phoneNumber == null || !phoneNumber.matches("^\\+[1-9]\\d{7,14}$")) {
-            throw new InvalidPhoneNumberException(INVALID_PHONE_NUMBER_MESSAGE);
-        }
-    }
 }

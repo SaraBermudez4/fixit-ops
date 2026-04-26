@@ -1,6 +1,6 @@
 package  com.fixit.notification.infraestructure.adapters.driving.rabbit.mapper;
 import com.fixit.notification.domain.model.SmsNotification;
-import com.fixit.notification.infrastructure.adapters.driven.rabbit.dto.TaskNotificationEventDto;
+import com.fixit.notification.infraestructure.adapters.driving.rabbit.event.TaskNotificationEventDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
