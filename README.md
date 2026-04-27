@@ -269,3 +269,9 @@ fixit-ops/
 ├── fixit-tasks/              # Microservicio de tareas
 └── fixit-notifications/      # Microservicio de notificaciones SMS
 ```
+## Link documentación RFC
+
+https://correoitmedu-my.sharepoint.com/:w:/g/personal/juancardona298991_correo_itm_edu_co/IQD3HY0l2hLbSYRhjCUG8e9-ASaVzCNjoARR1i1mRG8-l-c?e=OO3Cl3
+
+## Link diagrama
+https://drive.google.com/file/d/1O-AM9pXWbu-l8iiJdIN3rsX_1zYxM1iq/view?usp=sharing
