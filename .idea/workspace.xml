@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6326f6e4-a734-4ed1-927c-f7acef4189b8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/application/usecase/SmsNotificationUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/application/usecase/SmsNotificationUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/domain/enums/TaskPriority.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/domain/enums/TaskPriority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/config/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/event/TaskNotificationEventDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/event/TaskNotificationEventDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/handler/TaskNotificationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/handler/TaskNotificationEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/listener/TaskNotificationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/listener/TaskNotificationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/mapper/INotificationEventMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/mapper/INotificationEventMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/util/EventConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/adapters/driving/rabbit/util/EventConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/configuration/bean/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/java/com/fixit/notification/infraestructure/configuration/bean/BeanConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-notifications/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/port/in/ITechnicianServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/port/in/ITechnicianServicePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/usecase/TechnicianUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/application/usecase/TechnicianUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/infraestructure/adapters/driving/rest/controller/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/java/com/fixit/user/infraestructure/adapters/driving/rest/controller/TechnicianController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixit-user/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/fixit-user/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixit-notifications/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixit-tasks/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixit-notifications/src/main/resources/data.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
